@@ -23,7 +23,7 @@ const Category = () => {
                     color=""
                     className="flex justify-between items-center group/child rounded-none [&:not(:last-child)]:border-b-1  border-gray-200 cursor-pointer relative px-2 py-3 category-hover-effect"
                 >
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center text-gray-700 hover:text-theme-primary font-semibold transition-all">
                         <div className="flex items-center gap-2">
                             <Image
                                 className="w-10 h-10 rounded-full object-cover"
@@ -43,7 +43,7 @@ const Category = () => {
                             {category.children.map((children, index) => (
                                 <li
                                     key={index}
-                                    className="[&:not(:last-child)]:border-b-1 border-gray-200 px-7 py-2 relative before:absolute before:top-[50%] before:-translate-y-[50%] before:left-0 before:w-[2px] before:h-0 before:bg-theme-primary before:invisible before:opacity-0 before:hover:visible before:hover:opacity-100 before:hover:h-8 before:transition-all before:duration-400"
+                                    className="[&:not(:last-child)]:border-b-1  border-gray-200 px-7 py-2 relative text-gray-700 font-semibold hover:text-theme-primary category-hover-effect transition-colors"
                                 >
                                     {children}
                                 </li>
