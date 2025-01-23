@@ -7,36 +7,52 @@ import {
     DropdownMenu,
     DropdownItem,
 } from '@nextui-org/react';
+import Image from 'next/image';
 
 const Category = () => {
     return (
-        // <>
-        //     <ul className="w-72 py-2 px-8 shadow-xl">
-        //         {category.map((category) => (
-        //             <li
-        //                 key={category.id}
-        //                 className="flex justify-between items-center border-b-1 border-gray-600 cursor-pointer relative px-2 category-hover-effect"
-        //             >
-        //                 <span className="py-2">{category.name}</span>
-        //                 <MdKeyboardArrowRight />
-        //             </li>
-        //         ))}
-        //     </ul>
-
-        <DropdownMenu aria-label="Static Actions">
-            {/* <DropdownItem key="copy">
-                </DropdownItem> */}
+        <DropdownMenu
+            id="hrithik"
+            className="overflow-visible p-0"
+            aria-label="Static Actions"
+            variant="light"
+        >
             {category.map((category) => (
                 <DropdownItem
                     key={category.id}
-                    className="flex justify-between items-center border-b-1 border-gray-600 cursor-pointer relative px-2 category-hover-effect"
+                    color=""
+                    className="flex justify-between items-center group/child rounded-none [&:not(:last-child)]:border-b-1  border-gray-200 cursor-pointer relative px-2 py-3 category-hover-effect"
                 >
-                    <span className="py-2">{category.name}</span>
-                    <MdKeyboardArrowRight />
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-2">
+                            <Image
+                                className="w-10 h-10 rounded-full object-cover"
+                                src={category.image.src}
+                                width="50"
+                                height="50"
+                                alt="cart-1"
+                            />
+                            <span className="py-2">{category.name}</span>
+                        </div>
+                        {category.children.length !== 0 && (
+                            <MdKeyboardArrowRight />
+                        )}
+                    </div>
+                    {category.children.length !== 0 && (
+                        <ul className="absolute flex flex-col invisible group-hover/child:visible left-full top-6 bg-white shadow-md border-1 border-gray-50 w-72 py-2">
+                            {category.children.map((children, index) => (
+                                <li
+                                    key={index}
+                                    className="[&:not(:last-child)]:border-b-1 border-gray-200 px-7 py-2 relative before:absolute before:top-[50%] before:-translate-y-[50%] before:left-0 before:w-[2px] before:h-0 before:bg-theme-primary before:invisible before:opacity-0 before:hover:visible before:hover:opacity-100 before:hover:h-8 before:transition-all before:duration-400"
+                                >
+                                    {children}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </DropdownItem>
             ))}
         </DropdownMenu>
-        // </>
     );
 };
 

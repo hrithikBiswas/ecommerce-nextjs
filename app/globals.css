@@ -13,6 +13,20 @@
         @apply before:absolute before:top-[81%] before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:h-1 before:w-1  before:rounded-full before:bg-white before:invisible before:opacity-0 before:hover:visible before:hover:opacity-100 before:transition-all before:duration-300;
     }
     .category-hover-effect {
-        @apply before:absolute before:top-[50%] before:-translate-y-[50%] before:left-0 before:w-[2px] before:h-0 before:bg-red-500 before:invisible before:opacity-0 before:hover:visible before:hover:opacity-100 before:hover:h-8 before:transition-all before:duration-400;
+        @apply before:absolute before:top-[50%] before:-translate-y-[50%] before:left-0 before:w-[2px] before:h-0 before:bg-theme-primary before:invisible before:opacity-0 before:hover:visible before:hover:opacity-100 before:hover:h-8 before:transition-all before:duration-400;
+    }
+}
+
+@layer utilities {
+    .bg-content1.box-border.flex-col.inline-flex.items-center.justify-center.min-w-\[200px\].outline-none.p-1.rounded-large.shadow-medium.subpixel-antialiased.text-small.w-full.z-10 {
+        border-radius: unset;
+    }
+    .z-0.relative.bg-transparent.before\:content-\[\'\'\].before\:hidden.before\:z-\[-1\].before\:absolute.before\:rotate-45.before\:w-2\.5.before\:h-2\.5.before\:rounded-sm.data-\[arrow\=true\]\:before\:block {
+        top: 22px;
+        left: 28px;
+        min-width: 300px;
+    }
+    .z-10.inline-flex.flex-col.items-center.justify-center.subpixel-antialiased.outline-none.box-border.text-small.bg-content1.rounded-large.shadow-medium.w-full.p-1.min-w-\[200px\] {
+        padding: 0;
     }
 }

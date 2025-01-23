@@ -19,36 +19,7 @@ const Header = () => {
         <header className="bg-theme-primary text-white px-1 sm:px-7 py-4">
             <div className="grid grid-cols-12 items-center px-3">
                 <div className="col-span-6 xl:col-span-3 2xl:col-span-2 flex items-center gap-x-4 font-bold text-2xl">
-                    {/* <Button
-                        isIconOnly
-                        className="bg-gray-300/15 p-1 rounded-md"
-                    >
-                        <HiBars3BottomLeft className="font-bold text-6xl text-white" />
-                    </Button> */}
                     <HeaderHumbergurToggle />
-                    {/* <Dropdown>
-                        <DropdownTrigger>
-                            <Button
-                                isIconOnly
-                                className="bg-gray-300/15 p-1 rounded-md"
-                            >
-                                <HiBars3BottomLeft className="font-bold text-6xl text-white" />
-                            </Button>
-                        </DropdownTrigger>
-                        <DropdownMenu aria-label="Static Actions">
-                            <DropdownItem key="new">New file</DropdownItem>
-                            <DropdownItem key="copy">Copy link</DropdownItem>
-                            <DropdownItem key="edit">Edit file</DropdownItem>
-                            <DropdownItem
-                                key="delete"
-                                className="text-danger"
-                                color="danger"
-                            >
-                                Delete file
-                            </DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown> */}
-
                     <Image src={Logo} className="" alt="logo" />
                 </div>
                 <Navbar />

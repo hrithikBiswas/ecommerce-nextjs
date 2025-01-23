@@ -52,10 +52,17 @@ const CartDrawer = () => {
                                 <Divider className="my-2" />
                             </DrawerHeader>
                             <DrawerBody className="justify-center">
-                                <div className="flex flex-col items-center justify-center">
+                                <div className="flex flex-col gap-y-5 items-center justify-center">
                                     <Image src={cart} alt="cart-image" />
-                                    <h3>Your Cart is empty</h3>
-                                    <Button radius="full">Go To Shop</Button>
+                                    <h3 className="font-semibold text-black/90 mt-2">
+                                        Your Cart is empty
+                                    </h3>
+                                    <Button
+                                        className="bg-gray-500/10 text-black/90 font-semibold px-8 py-6"
+                                        radius="full"
+                                    >
+                                        Go To Shop
+                                    </Button>
                                 </div>
                             </DrawerBody>
                             <DrawerFooter className="flex flex-col">
@@ -64,12 +71,14 @@ const CartDrawer = () => {
                                     <h3 className="font-bold">Subtotal:</h3>
                                     <h3 className="font-bold">$0.00</h3>
                                 </div>
-                                <Button className="bg-theme-primary text-white rounded-full">
-                                    View Cart
-                                </Button>
-                                <Button className="bg-theme-primary text-white rounded-full">
-                                    Checkout
-                                </Button>
+                                <div className="flex flex-col gap-y-3 my-6 pb-12">
+                                    <Button className="bg-theme-primary text-white rounded-full py-[22px] tracking-wider">
+                                        View Cart
+                                    </Button>
+                                    <Button className="bg-theme-primary text-white rounded-full py-[22px] tracking-wider">
+                                        Checkout
+                                    </Button>
+                                </div>
                             </DrawerFooter>
                         </>
                     )}
