@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui } = require('@nextui-org/react');
+const { heroui } = require('@heroui/react');
 
 module.exports = {
     content: [
@@ -9,7 +9,7 @@ module.exports = {
 
         // Or if using `src` directory:
         './src/**/*.{js,ts,jsx,tsx,mdx}',
-        './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+        './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
@@ -25,9 +25,10 @@ module.exports = {
             lg: '1024px',
             xl: '1200px',
             '2xl': '1400px',
+            '3xl': '1500px',
         },
     },
     plugins: [],
     darkMode: 'class',
-    plugins: [nextui()],
+    plugins: [heroui()],
 };

@@ -1,16 +1,7 @@
 import Image from 'next/image';
-import { HiBars3BottomLeft } from 'react-icons/hi2';
 import Search from '@/app/components/Search';
 import HeaderControls from '@/app/components/HeaderControls';
 import Navbar from '@/app/ui/Navbar';
-import {
-    Button,
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownItem,
-} from '@nextui-org/react';
-
 import Logo from '@/public/logo.svg';
 import HeaderHumbergurToggle from '@/app/components/HeaderHumbergurToggle';
 

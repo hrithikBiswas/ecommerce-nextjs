@@ -8,7 +8,7 @@ import {
     DrawerFooter,
     Button,
     useDisclosure,
-} from '@nextui-org/react';
+} from "@heroui/react";
 
 const Login = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();

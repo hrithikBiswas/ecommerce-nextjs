@@ -10,7 +10,7 @@ import {
     Button,
     Divider,
     useDisclosure,
-} from '@nextui-org/react';
+} from "@heroui/react";
 import { BsHandbag } from 'react-icons/bs';
 import NotificationBadge from '@/app/components/NotificationBadge';
 import cart from '@/public/empty-cart.png';

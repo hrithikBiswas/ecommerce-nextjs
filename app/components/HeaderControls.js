@@ -1,4 +1,4 @@
-import { Button } from '@nextui-org/react';
+import { Button } from "@heroui/react";
 import { AiOutlineUser } from 'react-icons/ai';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { BsHandbag } from 'react-icons/bs';

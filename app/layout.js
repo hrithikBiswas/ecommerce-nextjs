@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { NextUIProvider } from '@nextui-org/react';
+import { HeroUIProvider } from "@heroui/react";
 import './globals.css';
 
 const geistSans = localFont({
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <NextUIProvider>{children}</NextUIProvider>
+                <HeroUIProvider>{children}</HeroUIProvider>
             </body>
         </html>
     );

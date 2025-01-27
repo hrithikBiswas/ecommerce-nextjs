@@ -1,4 +1,4 @@
-import { Badge, Button } from '@nextui-org/react';
+import { Badge, Button } from "@heroui/react";
 import { BsHandbag } from 'react-icons/bs';
 
 export default function NotificationBadge({

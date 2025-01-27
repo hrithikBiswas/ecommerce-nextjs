@@ -1,12 +1,6 @@
 import { category } from '../lib/data';
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import {
-    Button,
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownItem,
-} from '@nextui-org/react';
+import { DropdownMenu, DropdownItem } from "@heroui/react";
 import Image from 'next/image';
 
 const Category = () => {
