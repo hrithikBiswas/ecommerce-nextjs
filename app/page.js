@@ -23,7 +23,7 @@ export default function Home() {
             <Header />
             <main>
                 <section className="relative flex min-h-[700px] bg-gray-100 py-20 overflow-hidden">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center px-5 sm:px-0 w-full sm:max-w-[540px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1024px] 3xl:max-w-[1320px] mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center px-5 sm:px-8 lg:px-12 w-full sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 3xl:max-w-8xl mx-auto">
                         <div>
                             <Image src={textimage} alt="textimage" />
                             <h1 className="text-4xl lg:text-7xl 3xl:text-8xl font-semibold mb-12">
@@ -67,84 +67,153 @@ export default function Home() {
                         className="absolute left-[32%] bottom-[15%]"
                     />
                 </section>
-                <section className="flex flex-col justify-center items-center max-w-[1320px] mx-auto">
-                    <h3 className="text-theme-primary font-semibold text-lg">
-                        Shop by Category
-                    </h3>
-                    <h1 className="text-7xl font-semibold">
-                        Popular on the Shofi store.
-                    </h1>
-                    <div className="gap-2 grid grid-cols-5">
-                        <Card isPressable className="border-none" radius="lg">
+                <section className="py-28">
+                    <div className="px-5 sm:px-8 flex flex-col justify-center items-center max-w-8xl mx-auto">
+                        <h3 className="text-theme-primary font-semibold text-lg">
+                            Shop by Category
+                        </h3>
+                        <h1 className="text-5xl text-center font-semibold pt-4 pb-16">
+                            Popular on the Shofi store.
+                        </h1>
+                        <div className="gap-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                            <Card
+                                isPressable
+                                className="border-none"
+                                radius="lg"
+                            >
+                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
+                                    <h4 className="text-gray-800 font-semibold text-large">
+                                        Frozen Food
+                                    </h4>
+                                </CardHeader>
+                                <Image
+                                    alt="Woman listing to music"
+                                    src={category1}
+                                    className="object-cover h-[250px] w-[250px]"
+                                    radius="lg"
+                                    shadow="sm"
+                                    width="100%"
+                                />
+                            </Card>
+                            <Card
+                                isPressable
+                                className="border-none"
+                                radius="lg"
+                            >
+                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
+                                    <h4 className="text-gray-800 font-semibold text-large">
+                                        Frozen Food
+                                    </h4>
+                                </CardHeader>
+                                <Image
+                                    alt="Woman listing to music"
+                                    src={category2}
+                                    className="object-cover h-[250px] w-[250px]"
+                                    radius="lg"
+                                    shadow="sm"
+                                    width="100%"
+                                />
+                            </Card>
+                            <Card
+                                isPressable
+                                className="border-none"
+                                radius="lg"
+                            >
+                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
+                                    <h4 className="text-gray-800 font-semibold text-large">
+                                        Frozen Food
+                                    </h4>
+                                </CardHeader>
+                                <Image
+                                    alt="Woman listing to music"
+                                    src={category3}
+                                    className="object-cover h-[250px] w-[250px]"
+                                    radius="lg"
+                                    shadow="sm"
+                                    width="100%"
+                                />
+                            </Card>
+                            <Card
+                                isPressable
+                                className="border-none"
+                                radius="lg"
+                            >
+                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
+                                    <h4 className="text-gray-800 font-semibold text-large">
+                                        Frozen Food
+                                    </h4>
+                                </CardHeader>
+                                <Image
+                                    alt="Woman listing to music"
+                                    src={category4}
+                                    className="object-cover h-[250px] w-[250px]"
+                                    radius="lg"
+                                    shadow="sm"
+                                    width="100%"
+                                />
+                            </Card>
+                            <Card
+                                isPressable
+                                className="border-none"
+                                radius="lg"
+                            >
+                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
+                                    <h4 className="text-gray-800 font-semibold text-large">
+                                        Frozen Food
+                                    </h4>
+                                </CardHeader>
+                                <Image
+                                    alt="Woman listing to music"
+                                    src={category5}
+                                    className="object-cover h-[250px] w-[250px]"
+                                    radius="lg"
+                                    shadow="sm"
+                                    width="100%"
+                                />
+                            </Card>
+                            {/* <Card isPressable className="border-none" radius="lg">
                             <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-black  text-large">
+                                <h4 className="text-gray-800 font-semibold text-large">
                                     Frozen Food
                                 </h4>
                             </CardHeader>
                             <Image
                                 alt="Woman listing to music"
-                                className="object-cover"
-                                height={200}
-                                src={category1}
-                                width={200}
+                                src={category6}
+                                className="object-cover h-[250px] w-[250px]"
+                                radius="lg"
+                                shadow="sm"
+                                width="100%"
                             />
-                        </Card>
-                        <Card isPressable className="border-none" radius="lg">
-                            <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-black  text-large">
-                                    Frozen Food
-                                </h4>
-                            </CardHeader>
-                            <Image
-                                alt="Woman listing to music"
-                                className="object-cover"
-                                height={200}
-                                src={category2}
-                                width={200}
-                            />
-                        </Card>
-                        <Card isPressable className="border-none" radius="lg">
-                            <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-black  text-large">
-                                    Frozen Food
-                                </h4>
-                            </CardHeader>
-                            <Image
-                                alt="Woman listing to music"
-                                className="object-cover"
-                                height={200}
-                                src={category3}
-                                width={200}
-                            />
-                        </Card>
-                        <Card isPressable className="border-none" radius="lg">
-                            <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-black  text-large">
-                                    Frozen Food
-                                </h4>
-                            </CardHeader>
-                            <Image
-                                alt="Woman listing to music"
-                                className="object-cover"
-                                height={200}
-                                src={category4}
-                                width={200}
-                            />
-                        </Card>
-                        <Card isPressable className="border-none" radius="lg">
-                            <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-black  text-large">
-                                    Frozen Food
-                                </h4>
-                            </CardHeader>
-                            <Image
-                                alt="Woman listing to music"
-                                className="object-cover"
-                                height={200}
-                                src={category5}
-                                width={200}
-                            />
-                        </Card>
+                        </Card> */}
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="px-5 sm:px-8 pb-28 w-full sm:max-w-[540px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1024px] 3xl:max-w-8xl mx-auto">
+                        <h3 className="mb-2 text-theme-primary font-semibold text-lg text-center xl:text-left">
+                            Shop by Category
+                        </h3>
+                        <div className="flex flex-col items-center xl:flex-row xl:justify-between gap-y-10">
+                            <h1 className="text-5xl text-center font-semibold">
+                                Featured Products
+                            </h1>
+                            <ul className="relative flex flex-wrap gap-x-4 justify-center items-center text-xl text-gray-400">
+                                <li className="text-black">All Products</li>
+                                <li>Frozen Foods</li>
+                                <li>Meat and Fish</li>
+                                <li>Milk & Dairy</li>
+                                <span className="hidden md:inline-block absolute left-0 -bottom-1 w-28 h-[2px] bg-black"></span>
+                            </ul>
+                        </div>
+                        <div className="text-center mt-10">
+                            <Button
+                                radius="full"
+                                className="bg-theme-primary text-white px-12"
+                            >
+                                Shop Now
+                            </Button>
+                        </div>
                     </div>
                 </section>
             </main>

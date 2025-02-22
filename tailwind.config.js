@@ -18,6 +18,9 @@ module.exports = {
                     primary: '#678E61',
                 },
             },
+            maxWidth: {
+                '8xl': '1320px', // Custom container max-width
+            },
         },
         screens: {
             sm: '576px',
