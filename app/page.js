@@ -10,6 +10,11 @@ import image2 from '@/public/image2.webp';
 import image3 from '@/public/image3.webp';
 import image4 from '@/public/image4.webp';
 import image6 from '@/public/image6.webp';
+import image7 from '@/public/image7.webp';
+import image9 from '@/public/image9.webp';
+import image10 from '@/public/image10.webp';
+import image11 from '@/public/image11.webp';
+import image12 from '@/public/image12.webp';
 import category1 from '@/public/category-1.jpg';
 import category2 from '@/public/category-2.jpg';
 import category3 from '@/public/category-3.jpg';
@@ -89,7 +94,7 @@ export default function Home() {
                                 <Image
                                     alt="Woman listing to music"
                                     src={category1}
-                                    className="object-cover h-[250px] w-[250px]"
+                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                     radius="lg"
                                     shadow="sm"
                                     width="100%"
@@ -108,7 +113,7 @@ export default function Home() {
                                 <Image
                                     alt="Woman listing to music"
                                     src={category2}
-                                    className="object-cover h-[250px] w-[250px]"
+                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                     radius="lg"
                                     shadow="sm"
                                     width="100%"
@@ -127,7 +132,7 @@ export default function Home() {
                                 <Image
                                     alt="Woman listing to music"
                                     src={category3}
-                                    className="object-cover h-[250px] w-[250px]"
+                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                     radius="lg"
                                     shadow="sm"
                                     width="100%"
@@ -146,7 +151,7 @@ export default function Home() {
                                 <Image
                                     alt="Woman listing to music"
                                     src={category4}
-                                    className="object-cover h-[250px] w-[250px]"
+                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                     radius="lg"
                                     shadow="sm"
                                     width="100%"
@@ -165,7 +170,7 @@ export default function Home() {
                                 <Image
                                     alt="Woman listing to music"
                                     src={category5}
-                                    className="object-cover h-[250px] w-[250px]"
+                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                     radius="lg"
                                     shadow="sm"
                                     width="100%"
@@ -180,7 +185,7 @@ export default function Home() {
                             <Image
                                 alt="Woman listing to music"
                                 src={category6}
-                                className="object-cover h-[250px] w-[250px]"
+                                className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
                                 radius="lg"
                                 shadow="sm"
                                 width="100%"
@@ -215,6 +220,73 @@ export default function Home() {
                             </Button>
                         </div>
                     </div>
+                </section>
+                <section className="bg-gray-100 relative py-36">
+                    <div className="z-20 relative">
+                        <h3 className="mb-2 text-theme-primary font-semibold text-lg text-center">
+                            Shop by Category
+                        </h3>
+                        <h3 className="mb-2 font-semibold text-6xl text-center">
+                            Grab the best Offer <br /> Of this Week!
+                        </h3>
+                        <ul className="flex justify-center align-center gap-x-5 mt-10">
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                                <span className="text-theme-primary font-semibold text-3xl">
+                                    0
+                                </span>
+                                <span>Days</span>
+                            </li>
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                                <span className="text-theme-primary font-semibold text-3xl">
+                                    0
+                                </span>
+                                <span>Hours</span>
+                            </li>
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                                <span className="text-theme-primary font-semibold text-3xl">
+                                    0
+                                </span>
+                                <span>Mins</span>
+                            </li>
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5">
+                                <span className="text-theme-primary font-semibold text-3xl">
+                                    0
+                                </span>
+                                <span>Secs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    {/* <div className="max-w-8xl mx-auto"></div> */}
+                    <Image
+                        src={image9}
+                        alt="image9"
+                        className="absolute top-1/2 bottom-1/2 -translate-y-1/2"
+                    />
+                    <Image
+                        src={image7}
+                        alt="image7"
+                        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 w-[486px] h-[473px] z-10"
+                    />
+                    <Image
+                        src={image10}
+                        alt="image10"
+                        className="absolute top-1/2 bottom-1/2 right-40 -translate-y-1/2"
+                    />
+                    <Image
+                        src={image11}
+                        alt="image11"
+                        className="absolute top-[57%] bottom-[43%] right-36 -translate-y-1/2"
+                    />
+                    <Image
+                        src={image12}
+                        alt="image12"
+                        className="absolute bottom-0  left-[40%] right-[60%] -translate-x-1/2"
+                    />
+                    <Image
+                        src={image1}
+                        alt="image1"
+                        className="absolute top-14 left-[65%] right-[35%] -translate-x-1/2 scale-125"
+                    />
                 </section>
             </main>
         </>
