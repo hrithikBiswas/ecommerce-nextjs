@@ -221,28 +221,30 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="bg-gray-100 relative py-36">
+                <section className="bg-gray-100 relative overflow-hidden py-48 md:py-36">
                     <div className="z-20 relative">
                         <h3 className="mb-2 text-theme-primary font-semibold text-lg text-center">
                             Shop by Category
                         </h3>
-                        <h3 className="mb-2 font-semibold text-6xl text-center">
-                            Grab the best Offer <br /> Of this Week!
+                        <h3 className="mb-2 font-semibold text-4xl sm:text-6xl text-center">
+                            Grab the best Offer{' '}
+                            <br className="hidden sm:block" /> Of this{' '}
+                            <br className="block sm:hidden" /> Week!
                         </h3>
-                        <ul className="flex justify-center align-center gap-x-5 mt-10">
-                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                        <ul className="flex flex-wrap justify-center align-center gap-5 mt-10 px-4">
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 time-colon">
                                 <span className="text-theme-primary font-semibold text-3xl">
                                     0
                                 </span>
                                 <span>Days</span>
                             </li>
-                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 time-colon">
                                 <span className="text-theme-primary font-semibold text-3xl">
                                     0
                                 </span>
                                 <span>Hours</span>
                             </li>
-                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 after:h-[6px] after:w-[6px] after:rounded-full after:bg-gray-400/50 after:absolute after:-right-3 after:bottom-6 before:h-[6px] before:w-[6px] before:rounded-full before:bg-gray-400/50 before:absolute before:-right-3 before:top-6">
+                            <li className="relative flex flex-col justify-center items-center bg-white rounded-md py-2 px-5 time-colon">
                                 <span className="text-theme-primary font-semibold text-3xl">
                                     0
                                 </span>
@@ -265,17 +267,17 @@ export default function Home() {
                     <Image
                         src={image7}
                         alt="image7"
-                        className="absolute top-1/2 bottom-1/2 -translate-y-1/2 w-[486px] h-[473px] z-10"
+                        className="hidden sm:block absolute -left-72 xl:-left-40 2xl:left-0 top-1/2 bottom-1/2 -translate-y-1/2 w-[450px] h-[430px] object-fill z-10"
                     />
                     <Image
                         src={image10}
                         alt="image10"
-                        className="absolute top-1/2 bottom-1/2 right-40 -translate-y-1/2"
+                        className="absolute top-1/2 bottom-1/2 right-14 xl:right-20 2xl:right-40 -translate-y-1/2"
                     />
                     <Image
                         src={image11}
                         alt="image11"
-                        className="absolute top-[57%] bottom-[43%] right-36 -translate-y-1/2"
+                        className="hidden sm:block absolute top-[57%] bottom-[43%] -right-96 lg:-right-48 xl:-right-40 2xl:right-36 -translate-y-1/2"
                     />
                     <Image
                         src={image12}
