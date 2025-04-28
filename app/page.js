@@ -15,12 +15,19 @@ import image9 from '@/public/image9.webp';
 import image10 from '@/public/image10.webp';
 import image11 from '@/public/image11.webp';
 import image12 from '@/public/image12.webp';
+import preTitle from '@/public/pre-title.webp';
+import side1 from '@/public/side-1.webp';
+import product1 from '@/public/product-1.webp';
+import product2 from '@/public/product-2.webp';
+import product3 from '@/public/product-3.webp';
 import category1 from '@/public/category-1.jpg';
 import category2 from '@/public/category-2.jpg';
 import category3 from '@/public/category-3.jpg';
 import category4 from '@/public/category-4.jpg';
 import category5 from '@/public/category-5.jpg';
 import category6 from '@/public/category-6.jpg';
+import { BsArrowRight } from 'react-icons/bs';
+import { IoMdStar } from 'react-icons/io';
 
 export default function Home() {
     return (
@@ -289,6 +296,249 @@ export default function Home() {
                         alt="image1"
                         className="absolute top-14 left-[65%] right-[35%] -translate-x-1/2 scale-125"
                     />
+                </section>
+                <section className="mt-28 pb-14 w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-8xl mx-auto">
+                    <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-[#EEEBE4] flex flex-col justify-center items-center rounded-2xl pt-14 mr-12 mb-14">
+                            <Image
+                                src={preTitle}
+                                alt="preTitle"
+                                className="mb-4"
+                            />
+                            <h2 className="px-2 text-2xl lg:text-3xl font-semibold text-center mb-7">
+                                Get Up to 26% Off Vegetables
+                            </h2>
+                            <Button
+                                radius="full"
+                                className="bg-theme-primary px-8 text-white mb-16"
+                            >
+                                Shop Now <BsArrowRight />
+                            </Button>
+                            <Image
+                                src={side1}
+                                alt="side1"
+                                className="translate-y-6"
+                            />
+                        </div>
+                        <div className="mb-14">
+                            <h2 className="text-3xl mb-8">
+                                Top Sellling Products
+                            </h2>
+                            <div className="flex flex-col gap-3">
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product1}
+                                                alt={product1}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product2}
+                                                alt={product3}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product3}
+                                                alt={product3}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="px-3 mb-14">
+                            <h2 className="text-3xl mb-8">
+                                Top Sellling Products
+                            </h2>
+                            <div className="flex flex-col gap-3">
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product3}
+                                                alt={product3}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product1}
+                                                alt={product1}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* product card */}
+                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
+                                    <div className="flex flex-row gap-4">
+                                        <div className="overflow-hidden">
+                                            <Image
+                                                src={product2}
+                                                alt={product2}
+                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-between flex-grow py-3">
+                                            <div>
+                                                <h3 className="text-gray-500">
+                                                    Baby Food
+                                                </h3>
+                                                <p className="">
+                                                    Ergonomic Linen Pants
+                                                </p>
+                                            </div>
+                                            <div className="">
+                                                <span className="flex text-yellow-400 text-medium ml-1">
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                    <IoMdStar />
+                                                </span>
+                                                <span className="font-bold text-gray-800">
+                                                    &#36; 49.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </>
