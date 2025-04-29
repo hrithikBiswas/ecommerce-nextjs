@@ -35,4 +35,15 @@
     .transition-transform-background {
         transition: initial;
     }
+    .tooltip-right-arrow::after {
+        position: absolute;
+        content: '';
+        border-right: 8px solid black;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 0;
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
