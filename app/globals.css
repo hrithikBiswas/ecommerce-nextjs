@@ -21,6 +21,9 @@
     .vertical-divider {
         @apply relative after:absolute after:w-[1px] after:h-[50px] after:-left-8 after:bg-gray-300;
     }
+    .list-dot {
+        @apply px-[10px] relative after:absolute after:w-1 after:h-1 after:bg-gray-500 after:left-0 after:top-1/2 after:translate-y-[-50%] after:rounded-full after:hover:bg-theme-primary after:hover:transition-all after:hover:duration-300;
+    }
 }
 
 @layer utilities {
