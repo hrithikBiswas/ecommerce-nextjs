@@ -1,6 +1,6 @@
 import Header from '@/app/ui/Header';
 
-import { Card, CardHeader, Tooltip } from '@heroui/react';
+import { Card, CardHeader, Divider } from '@heroui/react';
 import Image from 'next/image';
 import { Button } from '@heroui/react';
 import textimage from '@/public/image5.webp';
@@ -20,6 +20,9 @@ import side1 from '@/public/side-1.webp';
 import product1 from '@/public/product-1.webp';
 import product2 from '@/public/product-2.webp';
 import product3 from '@/public/product-3.webp';
+import ctaThumb from '@/public/cta-thumb-1.webp';
+import catShape1 from '@/public/cta-shape-1.webp';
+import catShape2 from '@/public/cta-shape-2.webp';
 import category1 from '@/public/category-1.jpg';
 import category2 from '@/public/category-2.jpg';
 import category3 from '@/public/category-3.jpg';
@@ -31,6 +34,10 @@ import { IoMdStar } from 'react-icons/io';
 import { FiShoppingCart } from 'react-icons/fi';
 import { LuEye } from 'react-icons/lu';
 import { IoMdHeartEmpty } from 'react-icons/io';
+import { MdOutlineLocalShipping, MdOutlineHeadset } from 'react-icons/md';
+import { BsCurrencyDollar } from 'react-icons/bs';
+import { CiCreditCard1 } from 'react-icons/ci';
+import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import UserSwiper from '@/app/components/UserSwiper';
 import BestsellSwiper from '@/app/components/BestsellSwiper';
 
@@ -188,21 +195,6 @@ export default function Home() {
                                     width="100%"
                                 />
                             </Card>
-                            {/* <Card isPressable className="border-none" radius="lg">
-                            <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                <h4 className="text-gray-800 font-semibold text-large">
-                                    Frozen Food
-                                </h4>
-                            </CardHeader>
-                            <Image
-                                alt="Woman listing to music"
-                                src={category6}
-                                className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                radius="lg"
-                                shadow="sm"
-                                width="100%"
-                            />
-                        </Card> */}
                         </div>
                     </div>
                 </section>
@@ -584,6 +576,92 @@ export default function Home() {
                                 <BestsellSwiper />
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section className="mb-16">
+                    <div className="px-4 w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-8xl mx-auto">
+                        <div className="rounded-2xl ring-1 ring-gray-200 py-6 px-10 sm:px-12">
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between items-center gap-y-6">
+                                <li className="flex gap-2 items-center">
+                                    <MdOutlineLocalShipping className="text-3xl text-theme-primary" />
+                                    <h4 className="text-lg">
+                                        Flexible Delivery
+                                    </h4>
+                                </li>
+                                <li className="flex gap-2 items-center">
+                                    <BsCurrencyDollar className="text-3xl text-theme-primary" />
+                                    <h4 className="text-lg">100% Money Back</h4>
+                                </li>
+                                <li className="flex gap-2 items-center">
+                                    <CiCreditCard1 className="text-3xl text-theme-primary" />
+                                    <h4 className="text-lg">Secure Payment</h4>
+                                </li>
+                                <li className="flex gap-2 items-center">
+                                    <MdOutlineHeadset className="text-3xl text-theme-primary" />
+                                    <h4 className="text-lg">24 Hour Support</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section className="relative overflow-hidden pt-11">
+                    <div className="bg-theme-primary pt-20 md:pb-20 relative">
+                        <div className="px-4 w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-8xl mx-auto">
+                            <div className="flex justify-between flex-col md:flex-row gap-y-24">
+                                <div className="relative z-20">
+                                    <h1 className="text-white text-[40px] lg:text-5xl font-semibold mb-8 leading-[45px] lg:leading-[60px]">
+                                        Get the app & get{' '}
+                                        <br className="xl:hidden" /> Your{' '}
+                                        <br className="hidden xl:block" />{' '}
+                                        Groceries <br className="xl:hidden" />{' '}
+                                        from home
+                                    </h1>
+                                    <div className="flex gap-4">
+                                        <Button className="bg-black text-white shadow-lg py-7 px-6 rounded-[30px] hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
+                                            <FaGooglePlay className="text-2xl" />
+                                            <span className="flex flex-col items-start">
+                                                <span className="text-xs font-semibold">
+                                                    GET IT ON
+                                                </span>
+                                                <span className="font-bold text-base">
+                                                    Google Play
+                                                </span>
+                                            </span>
+                                        </Button>
+                                        <Button className="bg-white text-black shadow-lg py-7 px-6 rounded-[30px] hover:bg-black hover:text-white transition-all duration-300 ease-in-out">
+                                            <FaApple className="text-2xl" />
+                                            <span className="flex flex-col items-start">
+                                                <span className="text-xs font-semibold">
+                                                    DOWNLOAD ON THE
+                                                </span>
+                                                <span className="font-bold text-base">
+                                                    App Store
+                                                </span>
+                                            </span>
+                                        </Button>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center">
+                                    <div className="relative md:absolute z-20 w-[300px] h-[470px] bg-white md:right-[6%] lg:right-[10%] xl:right-[14%] 2xl:right-[23%] -bottom-[17%] rounded-[30px] ring-[6px] ring-black overflow-hidden">
+                                        <Image
+                                            src={ctaThumb}
+                                            alt="ctaThumb"
+                                            className="relative md:absolute w-full object-cover -top-3"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <Image
+                            src={catShape1}
+                            alt="catShape1"
+                            className="absolute bottom-0 left-0 mix-blend-luminosity z-10"
+                        />
+                        <Image
+                            src={catShape2}
+                            alt="catShape2"
+                            className="absolute top-0 right-0 mix-blend-luminosity z-10"
+                        />
                     </div>
                 </section>
             </main>
