@@ -1,6 +1,6 @@
 'use client';
 import { HiBars3BottomLeft } from 'react-icons/hi2';
-import { Button, Dropdown, DropdownTrigger } from "@heroui/react";
+import { Button, Dropdown, DropdownTrigger } from '@heroui/react';
 import Category from '@/app/ui/Category';
 
 const HeaderHumbergurToggle = () => {

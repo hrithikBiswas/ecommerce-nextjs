@@ -52,4 +52,7 @@
         top: 50%;
         transform: translateY(-50%);
     }
+    .top-divider > li:not(:first-child) {
+        border-top: 1px solid #ccc; /* or use your desired color */
+    }
 }

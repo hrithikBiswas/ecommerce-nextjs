@@ -40,7 +40,7 @@ import { CiCreditCard1 } from 'react-icons/ci';
 import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import UserSwiper from '@/app/components/UserSwiper';
 import BestsellSwiper from '@/app/components/BestsellSwiper';
-import Footer from '@/app/components/Footer';
+import Footer from '@/app/ui/Footer';
 
 export default function Home() {
     return (

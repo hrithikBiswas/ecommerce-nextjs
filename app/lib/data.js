@@ -43,3 +43,15 @@ export const category = [
         children: [],
     },
 ];
+
+const navMenu = [
+    { name: 'Home', children: [] },
+    { name: 'Shop', children: ['shop', 'cart', 'wishlist'] },
+    {
+        name: 'Pages',
+        children: ['about', 'login', 'register', 'profile', 'checkout'],
+    },
+    { name: 'Coupons', children: [] },
+    { name: 'Blog', children: ['blog standard', 'blog details'] },
+    { name: 'Contact', children: [] },
+];
