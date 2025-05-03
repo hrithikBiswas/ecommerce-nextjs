@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import product1 from '@/public/product-1.webp';
-import product2 from '@/public/product-2.webp';
-import product3 from '@/public/product-3.webp';
 import { IoMdStar } from 'react-icons/io';
 import { truncateWord, truncateText } from '@/app/lib/action';
 

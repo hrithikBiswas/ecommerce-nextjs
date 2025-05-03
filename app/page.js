@@ -270,7 +270,7 @@ export default async function Home() {
                                 </h1>
                             </div>
                             <div className="flex gap-3 mt-12">
-                                <BestsellSwiper />
+                                <BestsellSwiper products={products} />
                             </div>
                         </div>
                     </div>
