@@ -24,8 +24,6 @@ const ToggleMenuDrawer = () => {
         return setIsOpenSubMenu((prev) => !prev);
     };
 
-    console.log(isOpenSubMenu);
-
     return (
         <>
             <Button

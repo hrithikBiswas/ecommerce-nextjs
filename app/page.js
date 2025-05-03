@@ -40,9 +40,15 @@ import { CiCreditCard1 } from 'react-icons/ci';
 import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import UserSwiper from '@/app/components/UserSwiper';
 import BestsellSwiper from '@/app/components/BestsellSwiper';
+import ShopCategorySwiper from '@/app/components/ShopCategorySwiper';
 import Footer from '@/app/ui/Footer';
+import { fetchProducts } from '@/app/api/api';
+import TopSellingProduct from '@/app/components/TopSellingProduct';
+import TopRatingProduct from '@/app/components/TopRatingProduct';
 
-export default function Home() {
+export default async function Home() {
+    const products = await fetchProducts();
+
     return (
         <>
             <Header />
@@ -93,109 +99,15 @@ export default function Home() {
                     />
                 </section>
                 <section className="py-28">
-                    <div className="px-5 sm:px-8 flex flex-col justify-center items-center max-w-8xl mx-auto">
-                        <h3 className="text-theme-primary font-semibold text-lg">
+                    <div className="px-5 sm:px-8 pb-28 w-full sm:max-w-[540px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1024px] 3xl:max-w-8xl mx-auto">
+                        <h3 className="text-theme-primary font-semibold text-center text-lg">
                             Shop by Category
                         </h3>
                         <h1 className="text-5xl text-center font-semibold pt-4 pb-16">
                             Popular on the Shofi store.
                         </h1>
-                        <div className="gap-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-                            <Card
-                                isPressable
-                                className="border-none"
-                                radius="lg"
-                            >
-                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                    <h4 className="text-gray-800 font-semibold text-large">
-                                        Frozen Food
-                                    </h4>
-                                </CardHeader>
-                                <Image
-                                    alt="Woman listing to music"
-                                    src={category1}
-                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                    radius="lg"
-                                    shadow="sm"
-                                    width="100%"
-                                />
-                            </Card>
-                            <Card
-                                isPressable
-                                className="border-none"
-                                radius="lg"
-                            >
-                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                    <h4 className="text-gray-800 font-semibold text-large">
-                                        Frozen Food
-                                    </h4>
-                                </CardHeader>
-                                <Image
-                                    alt="Woman listing to music"
-                                    src={category2}
-                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                    radius="lg"
-                                    shadow="sm"
-                                    width="100%"
-                                />
-                            </Card>
-                            <Card
-                                isPressable
-                                className="border-none"
-                                radius="lg"
-                            >
-                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                    <h4 className="text-gray-800 font-semibold text-large">
-                                        Frozen Food
-                                    </h4>
-                                </CardHeader>
-                                <Image
-                                    alt="Woman listing to music"
-                                    src={category3}
-                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                    radius="lg"
-                                    shadow="sm"
-                                    width="100%"
-                                />
-                            </Card>
-                            <Card
-                                isPressable
-                                className="border-none"
-                                radius="lg"
-                            >
-                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                    <h4 className="text-gray-800 font-semibold text-large">
-                                        Frozen Food
-                                    </h4>
-                                </CardHeader>
-                                <Image
-                                    alt="Woman listing to music"
-                                    src={category4}
-                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                    radius="lg"
-                                    shadow="sm"
-                                    width="100%"
-                                />
-                            </Card>
-                            <Card
-                                isPressable
-                                className="border-none"
-                                radius="lg"
-                            >
-                                <CardHeader className="absolute z-10 top-1 flex-col justify-center">
-                                    <h4 className="text-gray-800 font-semibold text-large">
-                                        Frozen Food
-                                    </h4>
-                                </CardHeader>
-                                <Image
-                                    alt="Woman listing to music"
-                                    src={category5}
-                                    className="object-cover h-[250px] w-[250px] hover:scale-105 transition-transform duration-400 ease-in-out"
-                                    radius="lg"
-                                    shadow="sm"
-                                    width="100%"
-                                />
-                            </Card>
+                        <div className="">
+                            <ShopCategorySwiper products={products} />
                         </div>
                     </div>
                 </section>
@@ -318,224 +230,8 @@ export default function Home() {
                                 className="translate-y-6"
                             />
                         </div>
-                        <div className="mb-14">
-                            <h2 className="text-3xl mb-8">
-                                Top Sellling Products
-                            </h2>
-                            <div className="flex flex-col gap-3">
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product1}
-                                                alt={product1}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product2}
-                                                alt={product3}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product3}
-                                                alt={product3}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="px-3 mb-14">
-                            <h2 className="text-3xl mb-8">
-                                Top Sellling Products
-                            </h2>
-                            <div className="flex flex-col gap-3">
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product3}
-                                                alt={product3}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product1}
-                                                alt={product1}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* product card */}
-                                <div className="w-full md:max-w-md p-3 border-1 border-gray-200 rounded-xl cursor-pointer group/productImg hover:border-theme-primary transition-all duration-400 ease-in-out">
-                                    <div className="flex flex-row gap-4">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                src={product2}
-                                                alt={product2}
-                                                className="object-cover w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col justify-between flex-grow py-3">
-                                            <div>
-                                                <h3 className="text-gray-500">
-                                                    Baby Food
-                                                </h3>
-                                                <p className="">
-                                                    Ergonomic Linen Pants
-                                                </p>
-                                            </div>
-                                            <div className="">
-                                                <span className="flex text-yellow-400 text-medium ml-1">
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                    <IoMdStar />
-                                                </span>
-                                                <span className="font-bold text-gray-800">
-                                                    &#36; 49.00
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <TopSellingProduct products={products} />
+                        <TopRatingProduct products={products} />
                     </div>
                 </section>
                 <section className="mb-16">
