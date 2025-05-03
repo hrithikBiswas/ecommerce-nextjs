@@ -23,7 +23,7 @@ const TopRatingProduct = ({ products }) => {
                             <div className="overflow-hidden">
                                 <Image
                                     src={product.images[0]}
-                                    alt={product3}
+                                    alt={product.images[0]}
                                     height={100}
                                     width={100}
                                     className="object-cover bg-gray-100/60 w-[140px] h-[140px] aspect-square rounded-lg group-hover/productImg:scale-110 transition-all duration-400 ease-in-out"
