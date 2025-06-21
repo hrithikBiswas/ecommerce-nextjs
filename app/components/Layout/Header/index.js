@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Search from '@/app/components/Search';
-import HeaderControls from '@/app/components/HeaderControls';
-import Navbar from '@/app/ui/Navbar';
-import Logo from '@/public/logo.svg';
-import HeaderHumbergurToggle from '@/app/components/HeaderHumbergurToggle';
-import ToggleMenuDrawer from '@/app/components/drawer/ToggleMenuDrawer';
+import Image from "next/image";
+import Search from "@/app/components/Search";
+import HeaderControls from "@/app/components/Layout/Header/HeaderControls";
+import Navbar from "@/app/components/Layout/Header/Navbar";
+import Logo from "@/public/logo.svg";
+import HeaderHumbergurToggle from "@/app/components/Layout/Header/HeaderHumbergurToggle";
+import ToggleMenuDrawer from "@/app/components/drawer/ToggleMenuDrawer";
 
 const Header = () => {
     return (

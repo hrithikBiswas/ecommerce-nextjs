@@ -1,73 +1,40 @@
-'use client';
-
-import {
-    Drawer,
-    DrawerContent,
-    DrawerHeader,
-    DrawerBody,
-    DrawerFooter,
-    Button,
-    useDisclosure,
-} from '@heroui/react';
+import Footer from "@/app/components/Layout/Footer";
+import Header from "@/app/components/Layout/Header";
+import Link from "next/link";
+import LoginForm from "@/app/components/LoginForm";
 
 const Login = () => {
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
     return (
         <>
-            <Button onPress={onOpen}>Open Drawer</Button>
-            <Drawer
-                isOpen={isOpen}
-                motionProps={{
-                    variants: {
-                        enter: {
-                            opacity: 1,
-                            x: 0,
-                            duration: 0.3,
-                        },
-                        exit: {
-                            x: 100,
-                            opacity: 0,
-                            duration: 0.3,
-                        },
-                    },
-                }}
-                onOpenChange={onOpenChange}
-            >
-                <DrawerContent>
-                    {(onClose) => (
-                        <>
-                            <DrawerHeader className="flex flex-col gap-1">
-                                Custom Motion Drawer
-                            </DrawerHeader>
-                            <DrawerBody>
-                                <p>
-                                    This drawer has custom enter/exit
-                                    animations.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Nullam pulvinar risus non
-                                    risus hendrerit venenatis. Pellentesque sit
-                                    amet hendrerit risus, sed porttitor quam.
-                                </p>
-                            </DrawerBody>
-                            <DrawerFooter>
-                                <Button
-                                    color="danger"
-                                    variant="light"
-                                    onPress={onClose}
+            <Header />
+            <section>
+                <div className="mt-28 pb-14 w-full sm:max-w-[540px]  mx-auto">
+                    <div>
+                        <h1 className="text-5xl font-bold text-center">
+                            Register Now
+                        </h1>
+                        <p className="text-center text-gray-500 mt-2">
+                            Home Register
+                        </p>
+                        <div className="mt-10 flex flex-col justify-center items-center gap-y-2">
+                            <h1 className="text-3xl font-bold">
+                                Sign in Shofy
+                            </h1>
+                            <p className="text-center text-gray-500">
+                                Do not have an account?{" "}
+                                <Link
+                                    href="/register"
+                                    className="text-theme-primary  font-semibold"
                                 >
-                                    Close
-                                </Button>
-                                <Button color="primary" onPress={onClose}>
-                                    Action
-                                </Button>
-                            </DrawerFooter>
-                        </>
-                    )}
-                </DrawerContent>
-            </Drawer>
+                                    Create a free account
+                                </Link>
+                            </p>
+                            <LoginForm />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Footer />
         </>
     );
 };
